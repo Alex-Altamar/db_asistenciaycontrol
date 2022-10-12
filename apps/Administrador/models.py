@@ -10,4 +10,6 @@ class Admin(models.Model):
     apellidos = models.CharField(max_length=75)
     foto = models.CharField(max_length=200)
     f_creacion = models.DateField()
-    
+
+    def __str__(self) -> str:
+        return f'{self.nombres}{self.apellidos}'
