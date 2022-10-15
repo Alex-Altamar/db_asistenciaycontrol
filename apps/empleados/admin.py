@@ -7,7 +7,7 @@ from apps.empleados.models import Cargo, Horario, empleado
 class empleadoAdmin(admin.ModelAdmin):
     list_display = ('nombres','apellidos','cargo','horario')
     ordering = ('nombres','apellidos','cargo','horario',)
-    search_fields = ['nombres','apellidos','cargo__description',]#dos guiones debajo para realizar la busqueda cuandohay una llave foranea dentro de la tabla en la que de va a ralizar el filtro de busqueda###
+    search_fields = ['nombres','apellidos','cargo__description',]###dos guiones debajo para realizar la busqueda cuandohay una llave foranea dentro de la tabla en la que de va a ralizar el filtro de busqueda###
     list_filter = ('nombres','cargo',)
 
 

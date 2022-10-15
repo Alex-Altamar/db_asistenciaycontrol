@@ -6,9 +6,9 @@ from apps.empleados.models import empleado
 
 class Asistencia(models.Model):
     fecha = models.DateField()
-    h_entrada = models.TimeField()
+    h_entrada = models.TimeField(verbose_name='Hora de entrada')
     status = models.BooleanField()
-    h_salida = models.TimeField()
+    h_salida = models.TimeField(verbose_name='Hora de salida')
     n_horas = models.BigIntegerField()
     empleado = models.ForeignKey(empleado, null= True, blank= True, on_delete=models.CASCADE)
     
