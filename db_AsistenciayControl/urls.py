@@ -15,11 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from apps.empleados.views import home
 
 urlpatterns = [
+    path('', home, name='home'),
     path('admin/', admin.site.urls),
-    path('empleados/', include('apps.empleados.urls'), namespace="Empleados"),
-    #path('Administrador/', include('apps.Administrador.urls'), namespace="Administrador"),
+    path('empleados/', include('apps.empleados.urls'), name="Empleados"),
+    #path('Administrador/', include('apps.Administrador.urls'), name="Administrador"),
     
     #ubicamos namespace y lo referencio en archivo patterns y agrego nombre en url del modelo
 ]
