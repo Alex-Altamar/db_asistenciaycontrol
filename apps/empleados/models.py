@@ -1,3 +1,4 @@
+from time import time
 from django.db import models
 
 # Create your models here.
@@ -13,7 +14,7 @@ class Horario(models.Model):
     h_salida = models.TimeField()
     
     def __str__(self) -> str:
-        return f'{self.h_llegada}{self.h_salida}'
+        return f'{self.h_llegada}:{self.h_salida}'
 
 class empleado(models.Model):
     empleado_id = models.CharField(max_length=15)

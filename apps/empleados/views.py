@@ -4,7 +4,7 @@ from apps.empleados.models import empleado
 # Create your views here.
 
 def listempleados(request):
-    empleados = empleado.objects.all().order_by('-id')
+    empleados = empleado.objects.all().order_by('id')
     contex = {'empleados': empleados}
     return render(request, 'empleados/listempleados.html', contex)
 
